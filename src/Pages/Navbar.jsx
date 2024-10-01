@@ -53,6 +53,14 @@ function Navbar() {
       >
         About
       </NavLink>
+      <NavLink
+        to="/ser"
+        className={({ isActive }) => 
+          `${isActive ? 'underline text-green-500' : ''}`
+        }
+      >
+        Search
+      </NavLink>
     </nav>
         <div className="flex items-center space-x-4">
       <Link to="/cart">

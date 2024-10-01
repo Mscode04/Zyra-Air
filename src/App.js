@@ -15,7 +15,7 @@ function App() {
   const [cart, setcart] = useState([]);
   const [fav, setfav] = useState([]);
   return (
-    <div className="App flex flex-wrap flex-col bg-slate-400 mb-0">
+    <div className="App flex flex-wrap flex-col bg-slate-400">
       <Navbar />
       <Routes>
         <Route path='/' element={<Home cart={cart} setcart={setcart} fav={fav} setfav={setfav} />} />
