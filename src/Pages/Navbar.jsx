@@ -58,10 +58,10 @@ function Navbar() {
       <Link to="/cart">
         <img src={Cart} alt="Cart" className="h-6 cursor-pointer" />
       </Link>
-      <Link to="/cart">
+      <Link to="/fav">
         <img src={Fav} alt="Fav" className="h-6 cursor-pointer" />
       </Link>
-      <Link to="/cart">
+      <Link to="/log">
         <img src={Log} alt="Login" className="h-6 cursor-pointer" />
       </Link>
         </div> 

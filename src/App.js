@@ -8,20 +8,23 @@ import Popular from './Pages/Popular';
 import Home from './Pages/Home';
 import { Routes, Route, } from 'react-router-dom';
 import { useState } from 'react';
+import Favorate from './Pages/Favorate';
 
 
 function App() {
   const [cart, setcart] = useState([]);
+  const [fav, setfav] = useState([]);
   return (
-    <div className="App flex flex-wrap flex-col bg-orange-100">
+    <div className="App flex flex-wrap flex-col bg-slate-400 mb-0">
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home cart={cart} setcart={setcart}/>} />
-        <Route path='/men' element={<Men />} />
+        <Route path='/' element={<Home cart={cart} setcart={setcart} fav={fav} setfav={setfav} />} />
+        <Route path='/men' element={<Men  cart={cart} setcart={setcart} fav={fav} setfav={setfav}/>} />
         <Route path='/cart' element={<Cart cart={cart}/>} /> 
-        <Route path='/popular' element={<Popular />} />
+        <Route path='/fav' element={<Favorate fav={fav} setfav={setfav}/>} /> 
+        <Route path='/popular' element={<Popular cart={cart} setcart={setcart} fav={fav} setfav={setfav} />} />
         <Route path='/about' element={<About />} />
-        <Route path='/women' element={<Women />} />
+        <Route path='/women' element={<Women cart={cart} setcart={setcart} fav={fav} setfav={setfav}/>} />
       </Routes>
     </div>
   );
