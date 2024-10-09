@@ -9,6 +9,7 @@ import Home from './Pages/Home';
 import { Routes, Route, } from 'react-router-dom';
 import { useState } from 'react';
 import Favorate from './Pages/Favorate';
+import Search from './Pages/Search';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home cart={cart} setcart={setcart} fav={fav} setfav={setfav} />} />
+        <Route path='/ser' element={<Search cart={cart} setcart={setcart} fav={fav} setfav={setfav} />} />
         <Route path='/men' element={<Men  cart={cart} setcart={setcart} fav={fav} setfav={setfav}/>} />
         <Route path='/cart' element={<Cart cart={cart}/>} /> 
         <Route path='/fav' element={<Favorate fav={fav} setfav={setfav}/>} /> 
