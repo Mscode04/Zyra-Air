@@ -19,7 +19,7 @@ function App() {
     <div className="App flex flex-wrap flex-col bg-slate-400">
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home cart={cart} setcart={setcart} fav={fav} setfav={setfav} />} />
+        <Route path='/' basename='/' element={<Home cart={cart} setcart={setcart} fav={fav} setfav={setfav} />} />
         <Route path='/ser' element={<Search cart={cart} setcart={setcart} fav={fav} setfav={setfav} />} />
         <Route path='/men' element={<Men  cart={cart} setcart={setcart} fav={fav} setfav={setfav}/>} />
         <Route path='/cart' element={<Cart cart={cart}/>} /> 
